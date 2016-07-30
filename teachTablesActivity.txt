@@ -1,0 +1,36 @@
+1. Complete teachTables.py
+
+2. SSH into VM
+
+(for the purpose of this tutorial, we are only using the filter table)
+(also, you will need knowledge of typical port numbers for popular protocols)
+
+3. Set an iptables input rule allowing any packets from your IP
+
+4. Set an iptables output rule allowing any packets to your IP
+
+5. Set all of the table's default policies to DROP
+
+6. Try to wget/curl a webpage. what happens?
+
+7. Set rules allowing http and https traffic and counters initialized to packet:0 and byte:0.
+
+8. Try to wget/curl a webpage again. What happens this time?
+
+9. Chances are that your request failed. Troubleshoot why.
+
+10. Once you've got that fixed, try to wget/curl yet another webpage.
+
+11. List all the rules and take note of the counters for your rules. Are they what you expected?
+
+12. Now play around with adding, checking, replacing, and deleting a few rules. (Just make sure you don't delete rules allowing traffic to/from you)
+
+13. Flush the rules. (Just think before you act. Hint: Policies)
+
+14. Repeat steps 3,4, and 5.
+
+15. Time to learn about connection state matching. with the -m (--match) flag, one of the matches is the --state <state>[,...] where the different states are NEW,ESTABLISHED, RELATED, INVALID, and UNTRACKED.
+
+16. Test playing with connections of certain states.
+
+17. You are now proficient in iptables! Go read iptables-extensions manpage if you want to become a master.
